@@ -1,0 +1,105 @@
+#main-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, auto);
+}
+
+.hidden {
+    display: none;
+}
+
+header {
+    grid-column: span 5;
+    text-align: center;
+}
+
+header img {
+    max-height: 200px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+#team-select {
+    grid-column: span 5;
+    text-align: center;
+}
+
+input {
+    display: block;
+    margin: 30px auto 0 auto;
+    background-color: rgb(19, 59, 111);
+    color: rgb(255, 255, 255);
+    width: 80px;
+    height: 30px;
+    border-radius: 5%;
+    border: 1px solid rgb(19, 59, 111);
+}
+
+#current-week-games {
+    grid-column: span 5;
+}
+
+#game-info-container {
+    text-align: center;
+    margin: 10px auto;
+}
+
+#game-info {
+    display: inline-block;
+    list-style-type: none;
+    text-align: left;
+}
+
+#game-info > li:first-of-type {
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#game-info li {
+    margin: 10px auto;
+}
+
+#team-links {
+    grid-column: span 5;
+}
+
+#team-links ul {
+    list-style-type: none;
+    margin-top: 30px;
+}
+
+#team-links li {
+    display: inline;
+    margin: 10px;
+}
+
+ul img {
+    max-width: 75px;
+}
+
+#team-event-info {
+    grid-column: 2;
+}
+
+#event-info-container {
+    text-align: center;
+    margin: 10px auto;
+}
+
+#event-info {
+    display: inline-block;
+    list-style-type: none;
+    text-align: left;
+}
+
+#event-info > li:first-of-type {
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 10px;
+}
+

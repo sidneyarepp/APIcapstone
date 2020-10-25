@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL Team Info</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
+    type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="main-container">
+    <header>
+        <h1>NFL Team Information</h1>
+        <img src="nfl-logo.png">
+    </header>
+        
+    <section id=team-select>
+        <form>
+            <label for='nfl-teams'>Select Your Favorite NFL Team:</label>
+            <select id='nfl-teams' name='nfl-teams'>
+                <option value='Arizona Cardinals'>Arizona Cardinals</option>
+                <option value='Atlanta Falcons'>Atlanta Falcons</option>
+                <option value='Buffalo Bills'>Buffalo Bills</option>
+                <option value='Baltimore Ravens'>Baltimore Ravens</option>
+                <option value='Carolina Panthers'>Carolina Panthers</option>
+                <option value='Cincinnati Bengals'>Cincinnati Bengals</option>
+                <option value='Cleveland Browns'>Cleveland Browns</option>
+                <option value='Chicago Bears'>Chicago Bears</option>
+                <option value='Dallas Cowboys'>Dallas Cowboys</option>
+                <option value='Denver Broncos'>Denver Broncos</option>
+                <option value='Detroit Lions'>Detroit Lions</option>
+                <option value='Green Bay Packers'>Green Bay Packers</option>
+                <option value='Houston Texans'>Houston Texans</option>
+                <option value='Indianapolis Colts'>Indianapolis Colts</option>
+                <option value='Jacksonville Jaguars'>Jacksonville Jaguars</option>
+                <option value='Kansas City Chiefs'>Kansas City Chiefs</option>
+                <option value='Las Vegas Raiders'>Las Vegas Raiders</option>
+                <option value='Los Angeles Chargers'>Los Angeles Chargers</option>
+                <option value='Los Angeles Rams'>Los Angeles Rams</option>
+                <option value='Miami Dolphins'>Miami Dolphins</option>
+                <option value='Minnesota Vikings'>Minnesota Vikings</option>
+                <option value='New England Patriots'>New England Patriots</option>
+                <option value='New Orleans Saints'>New Orleans Saints</option>
+                <option value='New York Giants'>New York Giants</option>
+                <option value='New York Jets'>New York Jets</option>
+                <option value='Philadelphia Eagles'>Philadelphia Eagles</option>
+                <option value='San Francisco 49ers'>San Francisco 49ers</option>
+                <option value='Seattle Seahawks'>Seattle Seahawks</option>
+                <option value='Pittsburgh Steelers'>Pittsburgh Steelers</option>
+                <option value='Tampa Bay Buccaneers'>Tampa Bay Buccaneers</option>
+                <option value='Tennessee Titans'>Tennessee Titans</option>
+                <option value='Washington Football Team'>Washington Football Team</option>
+            </select>
+            <input type="submit">
+        </form>
+    </section>
+
+    <section id="current-week-games">
+        <!-- Current week games will show up here. -->
+        <div id=game-info-container>
+        <ul id="game-info">
+        </ul>
+        </div>
+    </section>
+
+    <section id="team-links" class="hidden">
+        <!-- Team data will show up here. -->
+    </section>
+
+    <section id="team-event-info" class="hidden">
+        <!-- Event dates will show up here. -->
+        <div id=event-info-container>
+        <ul id="event-info">
+        </ul>
+        </div>
+    </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
