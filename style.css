@@ -1,7 +1,9 @@
 #main-container {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(5, auto);
+    width: 85%;
+    margin: 0 auto;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .hidden {
@@ -26,6 +28,7 @@ header h1 {
 #team-select {
     grid-column: span 5;
     text-align: center;
+    margin-bottom: 0;
 }
 
 input {
@@ -39,67 +42,92 @@ input {
     border: 1px solid rgb(19, 59, 111);
 }
 
-#current-week-games {
-    grid-column: span 5;
-}
-
-#game-info-container {
-    text-align: center;
-    margin: 10px auto;
-}
-
-#game-info {
-    display: inline-block;
-    list-style-type: none;
-    text-align: left;
-}
-
-#game-info > li:first-of-type {
-    text-decoration: underline;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-#game-info li {
-    margin: 10px auto;
-}
-
 #team-links {
     grid-column: span 5;
+    text-align: center;
 }
 
 #team-links ul {
     list-style-type: none;
-    margin-top: 30px;
+    text-align: center;
+    padding: 0;
+    margin: 30px auto 10px auto;
 }
 
 #team-links li {
     display: inline;
-    margin: 10px;
+    text-decoration: none;
+    margin: 10px 15px;
 }
 
-ul img {
+#team-links img {
     max-width: 75px;
 }
 
 #team-event-info {
-    grid-column: 2;
-}
-
-#event-info-container {
+    grid-column: span 5;
     text-align: center;
-    margin: 10px auto;
 }
 
 #event-info {
     display: inline-block;
     list-style-type: none;
     text-align: left;
+    margin: 0;
+    padding: 0;
 }
 
-#event-info > li:first-of-type {
+#team-event-info h3 {
     text-decoration: underline;
     text-align: center;
     margin-bottom: 10px;
 }
 
+#current-week-games {
+    grid-column: span 5;
+    text-align: center;
+}
+
+#game-info {
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#game-info h3 {
+    text-align: center;
+    text-decoration: underline;
+    margin: 0;
+    padding: 0;
+}
+
+#game-info li {
+    margin: 10px 20px 0 20px;
+    display: inline-block;
+}
+
+#game-info img {
+    max-height: 50px;
+}
+
+#game-info .at-symbol {
+    max-width: 20px;
+    margin: 14px 5px;
+}
+
+#refresh-scores-button {
+    grid-column: span 5;
+    margin: 10px auto;
+}
+
+#refresh-scores {
+    margin: 10px auto 0 auto;
+    background-color: rgb(19, 59, 111);
+    color: rgb(255, 255, 255);
+    width: 120px;
+    height: 30px;
+    border-radius: 5%;
+    border: 1px solid rgb(19, 59, 111);
+}
