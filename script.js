@@ -5,7 +5,7 @@ let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(
 let dateTime = date+' '+time;
 
 const fetchTeams = () =>
-  fetch("http://site.api.espn.com/apis/site/v2/sports/football/nfl/teams")
+  fetch("https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`);
@@ -64,7 +64,7 @@ const fetchEvents = (teamID) =>
     });
 
 const displayScores = () =>
-fetch("http://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard")
+fetch("https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`);
