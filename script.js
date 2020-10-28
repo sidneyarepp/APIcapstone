@@ -52,14 +52,15 @@ const fetchEvents = (teamID) =>
       return response.json();
     })
     .then((data) => {
+      let nextFiveGames = [];
       for (let i = 0; i < data.events.length; i++) {
         let event = data.events[i];
         let eventDate = data.events[i].dateEvent.split("-");
         let correctedDate = `${eventDate[1]}/${eventDate[2]}/${eventDate[0]}`;
-        $("#event-info").append(
-          `<li>${correctedDate} ${event.strEventAlternate}</li>`
-        );
+        nextFiveGames.push(`<li>${correctedDate} ${event.strEventAlternate}</li>`);
       }
+      console.log(nextFiveGames);
+      $('#event-info').html(nextFiveGames);
     });
 
 const displayScores = () =>
