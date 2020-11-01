@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFL Team Info</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
     type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div id="main-container">
+    <main id="main-container">
     <header>
         <h1>NFL Team Information</h1>
         <img src="nfl-logo.png" alt="The NFL shield logo.">
     </header>
-        
+    
+    <!-- Team selection options are displayed so the value of their favorite team is correct for all js functions -->
     <section id=team-select>
         <form>
             <label for='nfl-teams'>Select Your Favorite NFL Team:</label>
@@ -74,7 +76,7 @@
         <ul id="game-info">
         </ul>
     </section>
-    </div>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
