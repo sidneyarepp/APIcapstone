@@ -10,13 +10,16 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <main id="main-container">
+    <main>
+    <div id="main-container">
+    <div id="top-container">
     <header>
         <h1>NFL Team Information</h1>
         <img src="nfl-logo.png" alt="The NFL shield logo.">
     </header>
     
     <!-- Team selection options are displayed so the value of their favorite team is correct for all js functions -->
+    
     <section id=team-select>
         <form>
             <label for='nfl-teams'>Select Your Favorite NFL Team:</label>
@@ -57,18 +60,22 @@
             <input type="submit">
         </form>
     </section>
+    </div>
 
-    <section id="team-links" class="hidden">
+    <div id="team-information" class="hidden">
+    <section id="team-links">
         <!-- Team data will show up here. -->
     </section>
 
-    <section id="team-event-info" class="hidden">
+    <section id="team-event-info">
         <!-- Event dates will show up here. -->
         <h3>Next Five Games</h3>
         <ul id="event-info">
         </ul>
     </section>
+    </div>
 
+    <div id="live-scores" class="hidden">
     <div id="refresh-scores-button"></div>
 
     <section id="current-week-games">
@@ -76,6 +83,8 @@
         <ul id="game-info">
         </ul>
     </section>
+    </div>
+    </div>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>

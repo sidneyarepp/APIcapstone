@@ -1,16 +1,16 @@
 /* general site settings*/
 main {
-    font-family: 'Source Sans Pro', sans-serif; 
-    background-color: rgb(230, 230, 230);
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: rgb(238, 238, 238);
+    min-height: 100vh;
 }
 
 /* setting up the responsive layout container */
 #main-container {
     display: grid;
     justify-content: center;
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
-    min-height: 100vh;
     grid-template-columns: repeat(5, 1fr);
 }
 
@@ -19,16 +19,19 @@ main {
     display: none;
 }
 
-/* header styling */
-header {
+#top-container {
     grid-column: span 5;
     text-align: center;
+    margin: 0 auto;
+    padding-top: 10px;
+    background-color: rgb(163, 162, 162);
+    width: 100%;
+    justify-self: center;
 }
 
 header img {
     max-height: 200px;
     margin-top: 0;
-    margin-bottom: 10px;
 }
 
 header h1 {
@@ -36,15 +39,9 @@ header h1 {
 }
 
 /* favorite team selecton styling */
-#team-select {
-    grid-column: span 5;
-    text-align: center;
-    margin-bottom: 0;
-}
-
 input {
     display: block;
-    margin: 30px auto 0 auto;
+    margin: 20px auto 20px auto;
     background-color: rgb(19, 59, 111);
     color: rgb(255, 255, 255);
     width: 80px;
@@ -53,17 +50,23 @@ input {
     border: 1px solid rgb(19, 59, 111);
 }
 
+
+
 /* favorite team information styling */
-#team-links {
+#team-information {
     grid-column: span 5;
     text-align: center;
+    margin: 20px auto;
+    background-color: #ffffff;
+    width: 80%;
+    text-align: center;
+    justify-self: center;
 }
 
 #team-links ul {
     list-style-type: none;
     text-align: center;
     padding: 0;
-    margin: 30px auto 10px auto;
 }
 
 #team-links li {
@@ -76,17 +79,16 @@ input {
     max-width: 75px;
 }
 
-#team-event-info {
-    grid-column: span 5;
-    text-align: center;
-}
-
 #event-info {
     display: inline-block;
     list-style-type: none;
     text-align: left;
     margin: 0;
     padding: 0;
+}
+
+#team-event-info {
+    margin-bottom: 20px;
 }
 
 #team-event-info h3 {
@@ -98,9 +100,16 @@ input {
 }
 
 /* live score styling */
-#current-week-games {
+
+#live-scores {
     grid-column: span 5;
     text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+    width: 80%;
+    text-align: center;
+    justify-self: center;
 }
 
 #game-info {
@@ -109,6 +118,9 @@ input {
     text-align: center;
     margin: 0;
     padding: 0;
+    width: 80%;
+    background-color: #ffffff;
+    justify-self: center;
 }
 
 #game-info h3 {
@@ -137,16 +149,16 @@ input {
 }
 
 #refresh-scores-button {
-    grid-column: span 5;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
 #refresh-scores {
-    margin: 20px auto;
+    margin: 0 auto;
     background-color: rgb(19, 59, 111);
     color: rgb(255, 255, 255);
     width: 120px;
     height: 30px;
     border-radius: 5%;
     border: 1px solid rgb(19, 59, 111);
+    justify-self: center;
 }

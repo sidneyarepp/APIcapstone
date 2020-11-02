@@ -50,8 +50,8 @@ const fetchTeamDetails = (team) =>
       // fetch to pull in all games for the current week
       fetchEvents(teamID)
       // removing the 'hidden' class from the areas of the page that contain the data.
-      $("#team-links").removeClass("hidden");
-      $("section").removeClass("hidden");
+      $("#team-information").removeClass("hidden");
+      $("#live-scores").removeClass("hidden");
     });
 
 // pulling the next five games for the selected team from the sports db api
