@@ -22,18 +22,18 @@ main {
     grid-column: span 5;
     text-align: center;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 0 20px 0;
     background-color: rgb(163, 162, 162);
     width: 100%;
 }
 
 header img {
     max-height: 200px;
-    margin-top: 0;
 }
 
 header h1 {
     margin: 0;
+    word-wrap: break-word;
 }
 
 /* favorite team selecton styling */
@@ -130,8 +130,7 @@ input {
 #game-info li {
     margin: 10px;
     display: inline-block;
-    width: 226px;
-    height: 125px;
+    padding: 10px;
 }
 
 #game-info img {
