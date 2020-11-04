@@ -4,33 +4,6 @@ const sportsDBeventsURL = 'https://www.thesportsdb.com/api/v1/json/1/eventsnext.
 const espnTeamURL = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams';
 const espnLiveScores = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard';
 
-// unused variable due to all team records not being available in espn's database
-let teamRecord = {};
-
-//unused functionality because of lack of data available for all 32 team records
-const fetchTeams = () =>
-  fetch(espnTeamURL)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Error: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((data) => {
-      // espn teams data structure to access all teams in the nfl
-      let teamsInfo = data.sports[0].leagues[0].teams;
-      // iterating over all the teams to pull team record data
-      for (let i = 0; i < teamsInfo.length; i++) {
-        let teamData = teamsInfo[i].team;
-        // team abbreviation is pulled to make it possible to pull each team's record
-        let currentTeamAbbreviation = teamData.abbreviation;
-        if (!teamRecord[currentTeamAbbreviation]) {
-          teamRecord[currentTeamAbbreviation] =
-            teamData.record.items[0].summary;
-        }
-      }
-    })
-
 // used to add all information to the page from the sports db api/a second fetch is called within this fetch, fetch events, to pull in the next five games for the team selected
 const fetchTeamDetails = (team) =>
   fetch(`${sportsDBteamURL}${team}`)
@@ -114,7 +87,6 @@ fetch(espnLiveScores)
 
 // used to create the page content
 function pageContent(team) {
-  fetchTeams();
   fetchTeamDetails(team);
   displayScores();
 }
@@ -123,7 +95,6 @@ function pageContent(team) {
 function refreshScores() {
   $('#refresh-scores-button').on('click', 'button', e => {
     e.stopPropagation();
-    console.log('clicked')
     displayScores();
   })
 }
@@ -133,7 +104,6 @@ function submitForm() {
   $("form").submit((e) => {
     e.preventDefault();
     selectedTeam = $("select").val();
-    console.log(selectedTeam);
     pageContent(selectedTeam);
   });
 }
