@@ -17,10 +17,10 @@ When you arrive on the site you will see a simple drop down menu allowing you to
 
 #### Team Links
 The links available to choose are below.  Each of these will open in their own tab.
-*Team Website (represented by the team logo)
-*Team Facebook Link
-*Team Twitter Link
-*Team Instagram Link
+* Team Website (represented by the team logo)
+* Team Facebook Link
+* Team Twitter Link
+* Team Instagram Link
 
 #### Next Five Games
 The next five games will display for the team chosen.
